@@ -1,5 +1,5 @@
 {
-  "name": "ssb-box1",
+  "name": "ssb-box",
   "version": "1.0.0",
   "description": "The original private-box SSB encryption format, for ssb-db2",
   "repository": {
