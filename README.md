@@ -10,6 +10,8 @@ This module implements the original "private-box" encryption format for SSB. You
 
 ## Installation
 
+- Requires **Node.js 12** or higher
+
 ```bash
 npm install ssb-box
 ```
@@ -18,7 +20,6 @@ npm install ssb-box
 
 YOU MOST LIKELY DON'T NEED TO DO THIS, because ssb-db2 bundles ssb-box already. But maybe one day ssb-db2 won't bundle it anymore, and then you _would_ have to do this.
 
-- Requires **Node.js 12** or higher
 - Requires `secret-stack@^6.2.0`
 - Requires `ssb-db2@>=5.0.0`
 
@@ -34,9 +35,11 @@ YOU MOST LIKELY DON'T NEED TO DO THIS, because ssb-db2 bundles ssb-box already. 
 
 ## Usage as a standalone
 
+This module conforms with [ssb-encryption-format](https://github.com/ssbc/ssb-encryption-format) so with ssb-box you can use all the methods specified by ssb-encryption-format.
+
 ```js
 const ssbKeys = require('ssb-keys');
-const boxFormat = require('./format');
+const boxFormat = require('ssb-box/format');
 
 const keys = ssbKeys.generate('ed25519', 'alice');
 const opts = {recps: [keys.id], keys};
@@ -53,8 +56,6 @@ const decrypted = boxFormat.decrypt(ciphertext, opts);
 console.log(decrypted);
 // <Buffer 68 65 6c 6c 6f>
 ```
-
-This module conforms with [ssb-encryption-format](https://github.com/ssbc/ssb-encryption-format) so with ssb-box you can use all the methods specified by ssb-encryption-format.
 
 ## License
 
