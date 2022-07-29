@@ -9,7 +9,7 @@ const {
   isButtwooV1FeedSSBURI,
   isBendyButtV1FeedSSBURI,
   decompose,
-  isFeedSSBURI,
+  isClassicFeedSSBURI,
 } = require('ssb-uri2');
 
 const encryptionFormat = {
@@ -20,7 +20,7 @@ const encryptionFormat = {
       .map(function convertToBase64DataStr(recp) {
         if (Ref.isFeed(recp)) return recp.slice(1, -8);
         else if (
-          isFeedSSBURI(recp) ||
+          isClassicFeedSSBURI(recp) ||
           isBendyButtV1FeedSSBURI(recp) ||
           isButtwooV1FeedSSBURI(recp)
         )
