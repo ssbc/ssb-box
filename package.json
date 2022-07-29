@@ -1,6 +1,6 @@
 {
   "name": "ssb-box",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The original private-box SSB encryption format, for ssb-db2",
   "repository": {
     "type": "git",
